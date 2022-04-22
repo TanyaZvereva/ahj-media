@@ -7,7 +7,7 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest -- watch" ,
     "coverage": "jest --coverage",
     "doc": "jsdoc -c jsdoc.conf.json",
     "preshow:coverage": "npm run coverage",
@@ -40,11 +40,24 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "core-js": "^3.20.2",
+    "jest": "^27.5.1",
+    "jest-puppeteer": "^6.1.0",
     "node-sass": "^7.0.1",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.3",
+    "puppeteer": "^13.6.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "preset": "jest-puppeteer"
   }
 }
