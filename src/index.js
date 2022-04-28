@@ -4,6 +4,12 @@ const messageList = document.querySelector('.message-list')
 
 export const getPrintedCoords = () => {
     const coords = prompt('Введите ширину и долготу через запятую').split(',').map(s => s.trim())
+    console.log(coords)
+    if(coords.length != 2) {
+        alert('Что-то пошло не  так ...')
+    }else if (Number(coords[0]) == coords[0] && Number(coords[1]) == coords[1] ){
+        alert('Что-то пошло не  так ...')
+    }
     return coords
 }
 
